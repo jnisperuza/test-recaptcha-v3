@@ -32,7 +32,6 @@
             type="text"
             name="remote-ip"
             id="remote-ip"
-            value="localhost"
           />
         </label>
       </fieldset>
