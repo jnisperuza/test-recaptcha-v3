@@ -35,6 +35,7 @@ var reload = function () {
         .then(
           function (token) {
             document.getElementById("g-recaptcha-response").value = token;
+            document.getElementById("site-verify-response").value = "";
           },
           function (error) {
             alert("reCaptcha was not initialized correctly");
