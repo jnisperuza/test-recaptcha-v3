@@ -13,7 +13,7 @@
     <section class="credentials">
       <fieldset>
         <legend>Credentials</legend>
-        <label for="site-key">
+        <label for="site-key" class="required">
           <span>Site Key:</span>
           <input
             type="text"
@@ -22,7 +22,7 @@
             onchange="loadRecaptchaLibrary()"
           />
         </label>
-        <label for="secret-key">
+        <label for="secret-key" class="required">
           <span>Secret Key:</span>
           <input type="text" name="secret-key" id="secret-key" />
         </label>

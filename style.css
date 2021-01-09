@@ -113,7 +113,7 @@ section.credentials fieldset label span {
   font-size: 14px;
 }
 
-section.credentials fieldset label span::after {
+section.credentials fieldset label.required span::after {
   position: absolute;
   content: "*";
   color: #f44336;

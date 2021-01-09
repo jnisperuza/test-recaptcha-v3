@@ -58,7 +58,7 @@ var verify = function () {
     alert("Enter the secret key");
   }
 
-  if (token && secretKey && remoteIp) {
+  if (token && secretKey) {
     $.post("verify.php", { token, secretKey, remoteIp }, function (data) {
       document.getElementById("site-verify-response").value = JSON.stringify(
         data,

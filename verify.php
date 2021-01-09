@@ -8,7 +8,7 @@ $token =  $_POST['token'];
 $secretKey =  $_POST['secretKey'];
 $remoteIp = $_POST['remoteIp'];
 
-if ($token && $secretKey && $remoteIp) {
+if ($token && $secretKey) {
       $ch = curl_init();
 
       curl_setopt($ch, CURLOPT_URL,"https://www.google.com/recaptcha/api/siteverify");
