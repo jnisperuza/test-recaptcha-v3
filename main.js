@@ -52,7 +52,7 @@ var verify = function () {
   var remoteIp = document.getElementById("remote-ip").value;
 
   if (!token) {
-    alert("You must first get the token");
+    alert("You must first generate the token");
   } else if (!secretKey) {
     alert("Enter the secret key");
   }
