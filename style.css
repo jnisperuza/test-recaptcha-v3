@@ -1,0 +1,151 @@
+body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 20px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  position: relative;
+  margin: 20px auto;
+}
+
+section fieldset {
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+section fieldset legend {
+  font-weight: bold;
+}
+
+section button {
+  cursor: pointer;
+}
+
+section button.copy {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  min-height: 120px;
+  background-color: #323232;
+  box-sizing: border-box;
+  color: #fafafa;
+  border-radius: 4px;
+  border: none;
+  resize: vertical;
+}
+
+textarea::selection {
+  background: #a8d1ff;
+}
+textarea::-moz-selection {
+  background: #a8d1ff;
+}
+
+section.credentials {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 150px;
+  align-items: center;
+  min-width: 400px;
+  max-width: 1000px;
+  width: 80%;
+}
+
+section.response {
+  min-width: 500px;
+  max-width: 1000px;
+  width: 80%;
+}
+
+section.credentials fieldset {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding: 20px;
+}
+
+section.credentials aside {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+}
+
+section.credentials aside button {
+  padding: 8px 0;
+}
+
+section.credentials fieldset label {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 80px 1fr;
+  margin-bottom: 10px;
+}
+
+section.credentials fieldset label span {
+  position: relative;
+  font-size: 14px;
+}
+
+section.credentials fieldset label span::after {
+  position: absolute;
+  content: "*";
+  color: red;
+  right: 0px;
+}
+
+section.credentials fieldset label input {
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 5px;
+  color: #5f6368;
+}
+
+section.credentials fieldset label input:focus {
+  border: 1px solid #1a73e8;
+}
+
+section.credentials fieldset label:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  section.credentials {
+    gap: 10px;
+    grid-template-columns: 1fr;
+    min-width: inherit;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  section.response {
+    min-width: inherit;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+p.credits {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  color: #323232;
+  font-size: 12px;
+  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 10;
+}
