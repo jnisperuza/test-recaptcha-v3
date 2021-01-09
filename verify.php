@@ -1,6 +1,8 @@
 <?php
 header('Access-Control-Allow-Origin: *');
-header('Content-Type: application/json');
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+header("Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS");
+header('content-type: application/json; charset=utf-8');
 
 $token =  $_POST['token'];
 $secretKey =  $_POST['secretKey'];
@@ -8,7 +10,7 @@ $remoteIp = $_POST['remoteIp'];
 
 if ($token && $secretKey && $remoteIp) {
       $ch = curl_init();
-  
+
       curl_setopt($ch, CURLOPT_URL,"https://www.google.com/recaptcha/api/siteverify");
       curl_setopt($ch, CURLOPT_POST, 1);
       curl_setopt($ch, CURLOPT_POSTFIELDS, "secret=$secretKey&response=$token&remoteip=$remoteIp");

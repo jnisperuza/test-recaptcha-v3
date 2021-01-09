@@ -32,9 +32,14 @@ var reload = function () {
         .execute(window.siteKey, {
           action: "homepage",
         })
-        .then(function (token) {
-          document.getElementById("g-recaptcha-response").value = token;
-        });
+        .then(
+          function (token) {
+            document.getElementById("g-recaptcha-response").value = token;
+          },
+          function (error) {
+            alert("reCaptcha was not initialized correctly");
+          }
+        );
     }
   } catch (Error) {
     alert("Enter the site key");

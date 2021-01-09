@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="language" content="es" />
     <title>Test Google reCapcha V3</title>
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
     <link rel="stylesheet" href="style.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="main.js"></script>
@@ -36,9 +37,9 @@
         </label>
       </fieldset>
       <aside>
-        <button onclick="reload()">Get token</button>
-        <button onclick="verify()">Site Verify</button>
-        <button onclick="location.reload()">Refresh</button>
+        <button onclick="reload()">Genarate token</button>
+        <button onclick="verify()">Site verify</button>
+        <button onclick="location.reload()">Reset</button>
       </aside>
     </section>
     <section class="response">
@@ -47,6 +48,7 @@
         <textarea
           name="g-recaptcha-response"
           id="g-recaptcha-response"
+          readonly
         ></textarea>
       </fieldset>
       <button class="copy" onclick="copyToClipboard('g-recaptcha-response')">
@@ -59,6 +61,7 @@
         <textarea
           name="site-verify-response"
           id="site-verify-response"
+          readonly
         ></textarea>
       </fieldset>
       <button class="copy" onclick="copyToClipboard('site-verify-response')">
